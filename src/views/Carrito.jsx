@@ -15,7 +15,7 @@ const Carrito = () => {
       <Table striped bordered hover responsive>
         <thead>
           <tr>
-            <th>#</th>
+            <th>Id</th>
             <th>Image</th>
             <th>Name</th>
             <th>Price</th>
@@ -23,16 +23,16 @@ const Carrito = () => {
           </tr>
         </thead>
         <tbody>
-          {cartItems.map((item, index) => (
-            <tr key={index}>
-              <td>{index + 1}</td>
+          {cartItems.map((item) => (
+            <tr key={item.id}>
+              <td>{item.id}</td>
               <td>
                 <img src={item.img} alt={item.name} style={{ width: '50px' }} />
               </td>
               <td>{item.name}</td>
               <td>${formatPrice(item.price)}</td>
               <td>
-                <button onClick={() => removeItemFromCart(index)} className="btn btn-danger">
+                <button onClick={() => removeItemFromCart(item.id)} className="btn btn-danger">
                   Remove
                 </button>
               </td>
@@ -49,4 +49,5 @@ const Carrito = () => {
 };
 
 export default Carrito;
+
 
