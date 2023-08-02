@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+}
+
+.cart-total {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  padding: 6px 50px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.btn-group {
+  display: flex;
+  gap: 0.5rem; 
+}
